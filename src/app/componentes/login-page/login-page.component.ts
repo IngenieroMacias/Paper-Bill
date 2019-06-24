@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../../servicios/auth.service';
 import {Router} from '@angular/router';
+import { map } from "rxjs/operators";
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -19,8 +20,8 @@ export class LoginPageComponent implements OnInit {
        this.routerLogin.navigate(['/private']);
      }).catch(error=>{
        console.log(error);
-       this.routerLogin.navigate(['/login']);
-     });;
+      
+     });
    }
 
 

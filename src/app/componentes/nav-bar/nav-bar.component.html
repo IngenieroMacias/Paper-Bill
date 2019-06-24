@@ -1,18 +1,26 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
-  <a class="navbar-brand my-lg-0"  href="#">Design <span class="text-danger">Thinking</span> </a>
+  <a class="navbar-brand my-lg-0"  href="#" *ngIf="!isLogin">Design <span class="text-danger">Thinking</span> </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto ">
-     <li class="nav-brand"><a class="nav-link" href="#">Inicio</a> </li>
+     
     </ul>
 
     <ul class="navbar-nav my-2 my-lg-0">
-      <li class="nav-item"><a class="nav-link"   routerLink="/login" routerLinkActive="router-link-active" >Login</a> </li>
-      <li class="nav-item"><a class="nav-link"   routerLink="/register" routerLinkActive="router-link-active" > Registro</a> </li>
-      <li class="nav-item"><a class="nav-link"  (click)="onClickLogout()" routerLinkActive="router-link-active" >Salir</a> </li>
+    <li class="nav-brand" *ngIf="!isLogin">
+    <a class="nav-link" href="#">Inicio</a>
+    </li>
+
+    <li class="nav-item" *ngIf="!isLogin">
+    <a class="nav-link"   routerLink="/login"   routerLinkActive="router-link-active" >Login</a> </li>
+    <li class="nav-item" *ngIf="!isLogin">
+    <a class="nav-link"   routerLink="/register"  routerLinkActive="router-link-active" > Registro</a> </li>
+    <li *ngIf="isLogin" class="nav-item">
+    <a class="nav-link"  href="#" (click)="onclickLogout()" >Salir</a>
+    </li>
      </ul>
 
     
