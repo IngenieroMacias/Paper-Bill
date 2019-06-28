@@ -6,16 +6,17 @@ body,
 
 
 /* Navbar animation */
-.navbar {
-  background-color: rgba(0, 0, 0, 0.2); }
+.navbar-all {
+  background-color:teal;
+ }
 
 .top-nav-collapse {
-  background-color: #929FBA; }
+  background-color:rgba(0, 0, 0, 0.2);; }
 
 /* Adding color to the Navbar on mobile */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 18px) {
   .navbar {
-    background-color: #929FBA; } }
+    background-color:teal; } }
 
 /* Footer color for sake of consistency with Navbar */
 .page-footer {

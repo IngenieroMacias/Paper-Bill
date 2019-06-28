@@ -3,34 +3,37 @@
 			<div class="wrap-login100">
 				<form  (submit)="onSubmitLogin()"  class="login100-form validate-form">
 					<span class="login100-form-title p-b-43">
-						Login to continue
+					 <img src="./assets/images/logo-alegra01.png" width="300px" alt="" sizes="" srcset="">
 					</span>
-					
-					
 					<div class="wrap-input100 validate-input"  data-validate = "Valid email is required: ex@abc.xyz">
-						<input   placeholder="Email" [(ngModel)]="email" class="input100" type="text" name="email">				
+						<input   placeholder="Email" [(ngModel)]="email" class="input100 " type="text" name="email">				
 					</div>
-					
-					
+
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
 						<input placeholder="Password" [(ngModel)]="password" class="input100" type="password" name="pass">	
 					</div>
 
-					
-			
-
 					<div class="container-login100-form-btn">
-                    <input type="submit" value="Enviar"  class="login100-form-btn">
+					<input type="submit" value="Enviar"  class="login100-form-btn btn btn-default btn-lg">
+					</div>
+
+					<div>
+						<div class="d-flex justify-content-center align-items-center">
+						  <div class="text-center white-text mx-4 wow fadeIn">
+							<button class="btn btn-default"><i class="fab fa-facebook-f pr-1"></i> Facebook</button> 
+							<button class="btn btn-default "> <i class="fab fa-google-plus-g pr-1"></i> +Google</button> 
+							 
+						  </div>
+						</div>
+					</div>
+
+					<div>
 					</div>
 					
-					<div class="text-center p-t-46 p-b-20">
-						
-					</div>
 				</form>
-
 				<div class="login100-more" style="background-image: url('./assets/images/bg-01.jpg');">
 				</div>
 			</div>
 		</div>
-	</div>
+</div>
 

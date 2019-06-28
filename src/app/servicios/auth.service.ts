@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import {AngularFireAuth} from 'angularfire2/auth';
+import {AngularFireModule} from 'angularfire2'
 import * as firebase from 'firebase/app';
 import 'rxjs/add/operator/map';
 import { map } from 'rxjs/operators';
+import {FlashMessagesService} from 'angular2-flash-messages';
 
 
 @Injectable({
@@ -10,7 +12,7 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
 
-  constructor(public afAuth:AngularFireAuth) { 
+  constructor(public afAuth:AngularFireAuth,public flashMessages:FlashMessagesService) { 
 
 
   }
@@ -19,10 +21,14 @@ export class AuthService {
     return new Promise((resolve,reject)=>{
       this.afAuth.auth.createUserWithEmailAndPassword(email,pass)
       .then(userData=>resolve(userData),
-       err=>reject(err)
-      );
-    });
+         err=>reject(err))
+      })
+     
+   
   }
+
+
+
 
   loginEmail(email:string,pass:string){
    return new Promise((resolve,reject)=>{
@@ -39,4 +45,6 @@ export class AuthService {
   logout(){
     return this.afAuth.auth.signOut();
   }
+
+
 }

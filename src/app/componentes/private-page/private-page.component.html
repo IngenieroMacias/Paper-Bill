@@ -1,9 +1,21 @@
-<div class="jumbotron">
-    <h1 class="display-3">Zona Privada</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
-  </div>
+<div>
+    <input type="checkbox" class="my-5" id="abrir-cerrar" name="abrir-cerrar" value="">
+    <label for="abrir-cerrar">&#9776; <span class="abrir"> Inicio</span><span   class="cerrar"></span></label>
+    <div>
+      
+    </div>
+    <div id="sidebar" class="sidebar">
+        
+        <ul class="menu">
+            <li *ngIf="isLogin" class="nav-item">
+            <a class="nav-link "  href="#" (click)="onclickLogout()" >Salir</a>
+             </li>
+            <li><a href="#">Opci�n 1</a></li>
+            <li><a href="#">Opci�n 2</a></li>
+            <li><a href="#">Opci�n 3</a></li>
+            <li><a href="#">Opci�n 4</a></li>
+            <li><a href="#">Opci�n 5</a></li>
+        </ul>
+    </div>
+    
+</div>

@@ -1,26 +1,32 @@
 
-<div class="container">
-  <div class="row">
-      <div class="col-md-6  mx-auto mt-5">
-        <div class="card">
-          <div class="card-body">
-            <h1 class="text-center">
-              <img src="assets/img/ui-design.png" width="50px" height="50px" alt="">
-              Design Thinking
-            </h1>
-            <form (submit)="onSubmitAddUser()" action="">
-              <div class="form-group">
-                <label for="user">Email:</label>
-                <input type="email" name="email" id="email" [(ngModel)]="email" class="form-control" placeholder="Ingresar Email">
-              </div>
-              <div class="form-group">
-                <label for="password">Contraseña:</label>
-                <input type="password" name="password" id="password" [(ngModel)]="password" class="form-control" placeholder="Ingresar Contraseñas">
-              </div>
-              <input type="submit"  value="Enviar" name="" id="" class="btn btn-info  btn-block btn-lg" >
-            </form>
-          </div>
+<div class="limiter mt-5 ">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <form  (submit)="onSubmitAddUser()" method="POST"  class="login100-form validate-form">
+        <span class="login100-form-title p-b-43">
+         <img src="./assets/images/logo-alegra01.png" width="300px" alt="" sizes="" srcset="">
+        </span>
+        <div class="wrap-input100 validate-input"  data-validate = "Valid email is required: ex@abc.xyz">
+          <input   placeholder="Email" [(ngModel)]="email" class="input100 " type="text" name="email">				
         </div>
+
+        <div class="wrap-input100 validate-input" data-validate="Password is required">
+          <input placeholder="Password" [(ngModel)]="password" class="input100" type="password" name="pass">	
+        </div>
+
+        <div class="container-login100-form-btn">
+          <input type="submit" id="alerta" value="Enviar"  class="login100-form-btn btn btn-default btn-lg">
+        </div>
+        <div>
+        </div>
+        
+      </form>
+      <div class="login100-more" style="background-image: url('./assets/images/bg-03.jpg');">
       </div>
     </div>
+  </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+
+
