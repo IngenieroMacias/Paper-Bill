@@ -1,20 +1,24 @@
 <div>
-    <input type="checkbox" class="my-5" id="abrir-cerrar" name="abrir-cerrar" value="">
+    <input type="checkbox" class="" id="abrir-cerrar" name="abrir-cerrar" value="">
     <label for="abrir-cerrar">&#9776; <span class="abrir"> Inicio</span><span   class="cerrar"></span></label>
-    <div>
-      
-    </div>
     <div id="sidebar" class="sidebar">
-        
         <ul class="menu">
-            <li *ngIf="isLogin" class="nav-item">
-            <a class="nav-link "  href="#" (click)="onclickLogout()" >Salir</a>
-             </li>
-            <li><a href="#">Opci�n 1</a></li>
-            <li><a href="#">Opci�n 2</a></li>
-            <li><a href="#">Opci�n 3</a></li>
-            <li><a href="#">Opci�n 4</a></li>
-            <li><a href="#">Opci�n 5</a></li>
+                <li><a href="#"> <i class="fas fa-home"> </i> Home </a></li>
+                <li><a href="#"><i class="fas fa-file-invoice"> </i> Facturas</a></li>
+                <li><a href="#"><i class="fas fa-dollar-sign"> </i> Gastos </a></li>
+                <li><a href="#"><i class="fas fa-user-friends"> </i> Contactos </a></li>
+                <li><a href="#"> <i class="fas fa-project-diagram"> </i> Servicios</a></li>
+                <li><a href="#"> <i class="fas fa-hand-holding-usd"></i>  Cotizaciones</a></li>
+                <li><a href="#"> <i class="far fa-comments"> </i> Soporte</a></li>
+                <li><a href="#">  <i class="fas fa-tools">  </i> Configuración </a></li>
+                 <div style="padding:50px">
+
+                 </div>
+                <li><a href="#"> <i class="fas fa-question-circle"> </i> Ayuda </a></li>
+                <li *ngIf="isLogin">
+                <a class="nav-link "  href="#" (click)="onclickLogout()" >
+                <i class="fas fa-sign-out-alt"> </i> Cerrar Sesión</a>
+            </li>
         </ul>
     </div>
     

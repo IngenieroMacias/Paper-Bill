@@ -1,5 +1,5 @@
 body {
-    font-family: "Segoe UI", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size:100%;
     margin:0;
     padding:0;
@@ -16,7 +16,7 @@ input#abrir-cerrar {
 label[for="abrir-cerrar"] {
     cursor:pointer;
     padding: 1rem;
-    background-color:teal;
+    background-color:#00B19D;
     color:#fff;
     display:inline-block;
     width:100%;
@@ -40,7 +40,6 @@ input#abrir-cerrar:checked ~ #sidebar {
 }
 
 input#abrir-cerrar:checked + label[for="abrir-cerrar"], input#abrir-cerrar:checked ~ #contenido {
-    margin-left:300px;
     transition: margin-left .4s;
 }
 
@@ -53,23 +52,38 @@ input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
     display:none;
 }
 
+.menu li a{
+    color:white;
+    padding: 13px;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+
+.menu li{
+    border-bottom:1px solid rgba(14, 13, 13, 0.3);
+    width: 300px;
+}
 .sidebar {
-    position: fixed;
+    position: relative ;
     height: 100%;
     width: 0;
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: white;
+    background-color: rgb(47, 165, 151);
     overflow-x: hidden;
     transition: 0.4s;
     padding: 1rem 0;
     box-sizing:border-box;
+    margin-left: 0;
 }
 
 .sidebar .boton-cerrar {
     position: absolute;
-    top: 0.5rem;
     right: 1rem;
     font-size: 2rem;
     display: block;
@@ -78,9 +92,11 @@ input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
     margin: 0;
     height: 32px;
     width: 32px;
-    text-align: center;
-    vertical-align: top;
+    text-align: justify;
+    
 }
+
+
 
 .sidebar ul, .sidebar li{
     margin:0;
@@ -89,7 +105,6 @@ input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
 }
 
 .sidebar ul {
-    margin: 4rem auto;
     display: block;
     width: 80%;
     min-width:200px;

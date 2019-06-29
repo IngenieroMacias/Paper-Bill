@@ -22,7 +22,7 @@ export class RegisterPageComponent implements OnInit {
       this.flashMessages.show('Bienvenido a Allegra', {cssClass:'alert-success',timeout:800});
       this.routerRegister.navigate(['/private']);
     }).catch(err=>{
-      this.flashMessages.show('*Datos Erroneos', {cssClass:'alert-danger',timeout:800});
+      this.flashMessages.show('Verificar Datos', {cssClass:'alert-danger',timeout:800});
       this.routerRegister.navigate(['/register']);
     });
   }
