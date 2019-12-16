@@ -2,25 +2,25 @@
 <div class="limiter ">
   <div class="container-login100">
     <div class="wrap-login100">
-      <form  (submit)="onSubmitAddUser()" method="POST"  class="login100-form validate-form">
-        <span class="login100-form-title p-b-43">
-         <img src="./assets/images/logo-alegra01.png" width="300px" alt="" sizes="" srcset="">
+      <div class="login100-form validate-form">
+        <span class="login100-form-title p-b-13">
+         <img src="./assets/images/archivo.png" width="400px">
         </span>
-        <div class="wrap-input100 validate-input"  data-validate = "Valid email is required: ex@abc.xyz">
-          <input   placeholder="Email" [(ngModel)]="email" class="input100 " type="text" name="email">				
+        <div class="wrap-input100 "  >
+          <input   placeholder="Email" [(ngModel)]="register.email" class="input100 " type="text" name="email">				
         </div>
 
-        <div class="wrap-input100 validate-input" data-validate="Password is required">
-          <input placeholder="Password" [(ngModel)]="password" class="input100" type="password" name="pass">	
+        <div class="wrap-input100 " >
+          <input placeholder="Password" [(ngModel)]="register.password" class="input100" type="password" name="pass">	
         </div>
 
         <div class="container-login100-form-btn">
-          <input type="submit" id="alerta" value="Enviar"  class="login100-form-btn btn btn-default btn-lg">
+          <input type="submit" id="alerta" value="Enviar" (click)="registrar()" class="login100-form-btn btn btn-default btn-lg">
         </div>
         <div>
         </div>
         
-      </form>
+      </div>
       <div class="login100-more" style="background-image: url('./assets/images/bg-03.jpg');">
       </div>
     </div>

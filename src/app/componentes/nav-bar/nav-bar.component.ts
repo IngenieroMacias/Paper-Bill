@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from '../../servicios/auth.service'
-import {Router} from '@angular/router'
+import { AuthService } from '../../servicios/auth.service'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-navbar',
@@ -8,27 +8,30 @@ import {Router} from '@angular/router'
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-public isLogin:boolean;
-public nombreUsuario:string;
-public emailUsuario:string;
+  public isLogin = false;
 
-
-constructor(public AuthServ:AuthService, public routerLogout:Router) { }
- 
-  ngOnInit() {
-    this.AuthServ.getAuth().subscribe((auth) =>{
-    if(auth){
-    this.isLogin=true;
-    this.nombreUsuario=auth.displayName;
-    this.emailUsuario=auth.email;
-    }else{
-      this.isLogin=false;
-    }
-    });
+  constructor(public AuthServ: AuthService, public routerLogout: Router) { 
+    this.AuthServ.isLogged()
+    .subscribe((result)=>{
+      if(result && result.uid){
+        this.isLogin=true;
+      }else{
+        this.isLogin=false;
+      }
+   },(error)=>{
+     console.log(error);
+       this.isLogin=false;  
+    })
   }
 
-  onclickLogout(){
-     this.AuthServ.logout();
-     }
-   }
- 
+  ngOnInit() {
+
+  }
+
+  onclickLogout() {
+    this.AuthServ.logout();
+  }
+
+  
+
+}

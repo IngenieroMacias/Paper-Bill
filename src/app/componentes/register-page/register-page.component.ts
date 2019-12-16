@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../../servicios/auth.service';
 import {Router} from '@angular/router';
-import {FlashMessagesService} from 'angular2-flash-messages';
+
 
 
 @Component({
@@ -10,21 +10,13 @@ import {FlashMessagesService} from 'angular2-flash-messages';
   styleUrls: ['./register-page.component.css']
 })
 export class RegisterPageComponent implements OnInit {
-  public email:string;
-  public password:string;
-  constructor(public authService:AuthService, public routerRegister:Router, public flashMessages: FlashMessagesService) {
+ register:any={};
+  constructor(private authService:AuthService, private routerRegister:Router) {
     
    }
 
-   onSubmitAddUser(){
-    this.authService.registerUser(this.email,this.password)
-    .then(resp=>{
-      this.flashMessages.show('Bienvenido a Allegra', {cssClass:'alert-success',timeout:800});
-      this.routerRegister.navigate(['/private']);
-    }).catch(err=>{
-      this.flashMessages.show('Verificar Datos', {cssClass:'alert-danger',timeout:800});
-      this.routerRegister.navigate(['/register']);
-    });
+  registrar(){
+    this.authService.registro(this.register.email,this.register.password);
   }
 
 

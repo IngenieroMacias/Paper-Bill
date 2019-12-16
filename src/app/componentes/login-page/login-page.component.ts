@@ -9,21 +9,13 @@ import { map } from "rxjs/operators";
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
-  public email:string;
-  public password:string;
+  public login:any={}
   constructor( public authServ:AuthService,public routerLogin:Router,public flashMessage: FlashMessagesService) {
   
    }
 
-   onSubmitLogin(){
-     this.authServ.loginEmail(this.email,this.password)
-     .then(resp=>{
-       this.flashMessage.show('Ingreso Correcto',{cssClass:'alert-success',timeout:800});
-       this.routerLogin.navigate(['/private']);
-     }).catch(error=>{
-       this.flashMessage.show('Verificar Datos',{cssClass:'alert-danger',timeout:800});
-       this.routerLogin.navigate(['/login']);
-     });
+   Login(){
+     this.authServ.loginEmail(this.login.email,this.login.password);
    }
 
 

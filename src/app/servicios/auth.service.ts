@@ -17,34 +17,41 @@ export class AuthService {
 
   }
 
-  registerUser(email:string,pass:string){
-    return new Promise((resolve,reject)=>{
-      this.afAuth.auth.createUserWithEmailAndPassword(email,pass)
-      .then(userData=>resolve(userData),
-         err=>reject(err))
-      })
-     
-   
+  public registro=(email,password)=>{
+   this.afAuth.auth.createUserWithEmailAndPassword(email,password)
+   .then((res)=>{
+    console.log(res);
+    alert('Usuario registrado');
+        
+   }).catch((error)=>{
+    console.log(error);
+    alert('Error');
+   }) 
   }
 
 
-
-
-  loginEmail(email:string,pass:string){
-   return new Promise((resolve,reject)=>{
-     this.afAuth.auth.signInWithEmailAndPassword(email,pass)
-     .then(userData=>resolve(userData),
-         err=>reject(err))
-   });
+  public loginEmail=(email,password)=>{
+   this.afAuth.auth.signInWithEmailAndPassword(email,password)
+   .then((resp)=>{
+    console.log(resp);
+    alert('Usuario registrado');
+        
+   }).catch((error)=>{
+    console.log(error);
+    alert('Error');
+   }) 
   }
     
-  getAuth(){
+  public getAuth(){
       return this.afAuth.authState.map (auth => auth);
     }
 
-  logout(){
+  public logout(){
     return this.afAuth.auth.signOut();
   }
 
+  public isLogged(){
+   return this.afAuth.authState;
+  }
 
 }
