@@ -1,7 +1,7 @@
 <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<div class="login100-form ">
+				<form (submit)="Login()" class="login100-form ">
 					<span class="login100-form-title p-b-3">
 					 <img src="./assets/images/archivo.png" width="400px" alt="" sizes="" srcset="">
 					</span>
@@ -14,14 +14,14 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-					<input  value="Enviar"  (click)="Login()"  class="login100-form-btn btn btn-default btn-lg">
+					<input  type="submit" value="Enviar"  (click)="Login()"  class="login100-form-btn btn btn-default btn-lg">
 					</div>
 
 					<div>
 						<div class="d-flex justify-content-center align-items-center">
 						  <div class="text-center white-text mx-4 wow fadeIn">
 							<button class="btn btn-default"><i class="fab fa-facebook-f pr-1"></i> Facebook</button> 
-							<button class="btn btn-default "> <i class="fab fa-google-plus-g pr-1"></i> +Google</button> 
+							<button class="btn btn-default "> <i class="fab fa-google-plus-g pr-1"></i> Google</button> 
 							 
 						  </div>
 						</div>
@@ -30,7 +30,7 @@
 					<div>
 					</div>
 					
-				</div>
+				</form>
 				<div class="login100-more" style="background-image: url('./assets/images/bg-01.jpg');">
 				</div>
 			</div>

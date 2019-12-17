@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit } from '@angular/core';
 import {AuthService} from '../../servicios/auth.service'
 import {Router} from '@angular/router'
 
@@ -8,29 +8,28 @@ import {Router} from '@angular/router'
   styleUrls: ['./private-page.component.css']
 })
 export class PrivatePageComponent implements OnInit {
+  public isLogin = false;
 
-   public isLogin:boolean;
-   public nombreUsuario:string;
-   public emailUsuario:string;
-   
-   
-   constructor(public AuthServ:AuthService, public routerLogout:Router) { }
-    
-     ngOnInit() {
-       this.AuthServ.getAuth().subscribe((auth) =>{
-       if(auth){
-       this.isLogin=true;
-       this.nombreUsuario=auth.displayName;
-       this.emailUsuario=auth.email;
-       }else{
-         this.isLogin=false;
-       }
-       });
-     }
-   
-     onclickLogout(){
-        this.AuthServ.logout();
-        }
+  constructor(public AuthServ: AuthService, public routerLogout: Router) { 
+    this.AuthServ.isLogged()
+    .subscribe((result)=>{
+      if(result && result.uid){
+        this.isLogin=true;
+      }else{
+        this.isLogin=false;
+      }
+   },(error)=>{
+     console.log(error);
+       this.isLogin=false;  
+    })
+  }
+     
+   ngOnInit() {
+   }
+
+   onclickLogout(){
+       this.AuthServ.logout();
+   }
 
   
 }

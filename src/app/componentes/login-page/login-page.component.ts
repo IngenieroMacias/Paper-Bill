@@ -10,12 +10,18 @@ import { map } from "rxjs/operators";
 })
 export class LoginPageComponent implements OnInit {
   public login:any={}
-  constructor( public authServ:AuthService,public routerLogin:Router,public flashMessage: FlashMessagesService) {
+  constructor( public authServ:AuthService,public router:Router,public flashMessage: FlashMessagesService) {
   
    }
 
    Login(){
-     this.authServ.loginEmail(this.login.email,this.login.password);
+     this.authServ.loginEmail(this.login.email,this.login.password)
+     .then((res)=>{
+         this.router.navigate(['/private']);
+     }).catch((error)=>{
+       console.log(error);
+       this.router.navigate(['/login']);
+     })
    }
 
 

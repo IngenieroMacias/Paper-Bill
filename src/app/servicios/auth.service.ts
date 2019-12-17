@@ -5,24 +5,24 @@ import * as firebase from 'firebase/app';
 import 'rxjs/add/operator/map';
 import { map } from 'rxjs/operators';
 import {FlashMessagesService} from 'angular2-flash-messages';
-
+import {Router} from '@angular/router';
+import { resolve } from 'url';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-
-  constructor(public afAuth:AngularFireAuth,public flashMessages:FlashMessagesService) { 
-
-
-  }
+  constructor(public afAuth:AngularFireAuth,public flashMessages:FlashMessagesService, public router:Router) { 
+    this.isLogged();
+}
 
   public registro=(email,password)=>{
    this.afAuth.auth.createUserWithEmailAndPassword(email,password)
    .then((res)=>{
     console.log(res);
     alert('Usuario registrado');
-        
+    this.router.navigate(['/private']);
+      
    }).catch((error)=>{
     console.log(error);
     alert('Error');
@@ -30,28 +30,37 @@ export class AuthService {
   }
 
 
-  public loginEmail=(email,password)=>{
-   this.afAuth.auth.signInWithEmailAndPassword(email,password)
-   .then((resp)=>{
-    console.log(resp);
-    alert('Usuario registrado');
+  // public loginEmail=(email,password)=>{
+  //  this.afAuth.auth.signInWithEmailAndPassword(email,password)
+  //  .then((resp)=>{
+  //   console.log(resp);
+  //   alert('Usuario registrado');
+  //   this.router.navigate(['/private']);
         
-   }).catch((error)=>{
-    console.log(error);
-    alert('Error');
-   }) 
+  //  }).catch((error)=>{
+  //   console.log(error);
+  //   alert('Error');
+  //  }) 
+  // }
+
+  loginEmail(email,password){
+    return new Promise((resolve,reject)=>{
+      this.afAuth.auth.signInWithEmailAndPassword(email,password)
+      .then(userData=> resolve(userData),
+      err=>reject(err));
+    });
   }
     
   public getAuth(){
-      return this.afAuth.authState.map (auth => auth);
-    }
+    return this.afAuth.authState.map (auth => auth);
+  }
 
   public logout(){
     return this.afAuth.auth.signOut();
   }
 
   public isLogged(){
-   return this.afAuth.authState;
+     return this.afAuth.authState;
   }
 
 }
