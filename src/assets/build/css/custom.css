@@ -1,3 +1,6 @@
+
+
+
 .daterangepicker .ranges li {
   color: #73879C; }
   .daterangepicker .ranges li.active, .daterangepicker .ranges li:hover {
@@ -892,7 +895,7 @@
   content: "\e260"; }
 
 .left_col {
-  background: #2A3F54; }
+  background: rgb(47, 165, 151); }
 
 .container {
   width: 100%;
@@ -935,7 +938,9 @@
 .site_title i {
   border: 1px solid #EAEAEA;
   padding: 5px 6px;
-  border-radius: 50%; }
+  border-radius: 50%;
+
+}
 
 .nav-sm .main_container .top_nav {
   display: block;
@@ -1000,7 +1005,7 @@
   font-size: 11px;
   margin-bottom: 0;
   margin-top: 0;
-  text-shadow: 1px 1px #000; }
+}
 
 .menu_section > ul {
   margin-top: 10px;
@@ -1028,7 +1033,7 @@
 .profile_info span {
   font-size: 13px;
   line-height: 30px;
-  color: #BAB8B8; }
+  color:white; }
 
 .profile_info h2 {
   font-size: 14px;
@@ -1120,10 +1125,11 @@ body .container.body .right_col {
 .nav_title {
   width: 230px;
   float: left;
-  background: #2A3F54;
+  background: rgb(47, 165, 151);
   border-radius: 0;
   height: 57px;
-  padding: 0px; }
+  padding: 0px;
+}
 
 @media (max-width: 991px) {
   .nav-md .container.body .right_col, .nav-md .container.body .top_nav {
@@ -1243,8 +1249,8 @@ body .container.body .right_col {
   color: #fff !important; }
 
 body {
-  color: #73879C;
-  background: #2A3F54;
+  color: black;
+  background:whitesmoke;
   font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -1419,13 +1425,13 @@ a:hover, a:focus {
 
 .nav.child_menu li:hover,
 .nav.child_menu li.active {
-  background-color: rgba(255, 255, 255, 0.06); }
+  background-color: rgb(47, 165, 151) }
 
 .nav.child_menu li {
   padding-left: 36px; }
 
 .nav-md ul.nav.child_menu li:before {
-  background: #425668;
+  background:  rgb(47, 165, 151);
   bottom: auto;
   content: "";
   height: 8px;
@@ -1438,7 +1444,7 @@ a:hover, a:focus {
   border-radius: 50%; }
 
 .nav-md ul.nav.child_menu li:after {
-  border-left: 1px solid #425668;
+  border-left: 1px solid  rgb(47, 165, 151);
   bottom: 0;
   content: "";
   left: 27px;
@@ -1469,7 +1475,7 @@ a:hover, a:focus {
   border-right: 5px solid #1ABB9C; }
 
 .nav li.current-page {
-  background: rgba(255, 255, 255, 0.05); }
+  background: rgb(47, 165, 151) }
 
 .nav li li li.current-page {
   background: none; }
@@ -1479,7 +1485,7 @@ a:hover, a:focus {
 
 .nav.side-menu > li.active > a {
   text-shadow: rgba(0, 0, 0, 0.25) 0 -1px 0;
-  background: linear-gradient(#334556, #2C4257), #2A3F54;
+  background:  rgb(47, 165, 151);
   box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0; }
 
 .navbar-brand, .navbar-nav > li > a {
@@ -1608,7 +1614,7 @@ footer {
   text-align: center; }
 
 .jqstooltip {
-  background: #34495E !important;
+  background:  rgb(47, 165, 151) !important;
   width: 30px !important;
   height: 22px !important;
   text-decoration: none; }
@@ -1965,7 +1971,7 @@ table.jambo_table {
   border: 1px solid rgba(221, 221, 221, 0.78); }
 
 table.jambo_table thead {
-  background: rgba(52, 73, 94, 0.94);
+  background: rgb(47, 165, 151);
   color: #ECF0F1; }
 
 table.jambo_table tbody tr:hover td {
@@ -2316,7 +2322,7 @@ span.right {
   padding: 5px 0 0 0;
   position: fixed;
   width: 230px;
-  background: #2A3F54; }
+  background: rgb(47, 165, 151) ; }
 
 .sidebar-footer a {
   padding: 7px 0 3px;
@@ -2325,7 +2331,7 @@ span.right {
   font-size: 17px;
   display: block;
   float: left;
-  background: #172D44; }
+  background: rgb(47, 165, 151); }
 
 .sidebar-footer a:hover {
   background: #425567; }
