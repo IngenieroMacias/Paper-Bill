@@ -9,18 +9,26 @@ import { Router } from '@angular/router'
 })
 export class NavBarComponent implements OnInit {
   public isLogin = false;
-
-  constructor(public AuthServ: AuthService, public routerLogout: Router) { 
+  loggedUser: any = {};
+  imgUser: any = {};
+  constructor(public AuthServ: AuthService, public routerLogout: Router) {
     this.AuthServ.isLogged()
     .subscribe((result)=>{
       if(result && result.uid){
         this.isLogin=true;
+        setTimeout(() => {
+          this.loggedUser=this.AuthServ.getUser().currentUser.photoURL;
+          this.imgUser=this.AuthServ.getUser().currentUser.email;
+          console.log(this.loggedUser);
+          console.log(this.imgUser);
+        }, 500);
+
       }else{
         this.isLogin=false;
       }
    },(error)=>{
      console.log(error);
-       this.isLogin=false;  
+       this.isLogin=false;
     })
   }
 
@@ -32,6 +40,6 @@ export class NavBarComponent implements OnInit {
     this.AuthServ.logout();
   }
 
-  
+
 
 }

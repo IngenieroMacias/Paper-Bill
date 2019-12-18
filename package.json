@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~8.0.0",
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
+    "alertifyjs": "^1.13.1",
     "angular2-flash-messages": "^3.0.1",
     "angularfire2": "^5.0.0-rc.7",
     "bootstrap": "^4.0.0",

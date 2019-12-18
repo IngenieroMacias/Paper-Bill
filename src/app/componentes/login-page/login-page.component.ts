@@ -3,6 +3,7 @@ import {AuthService} from '../../servicios/auth.service';
 import {FlashMessagesService} from 'angular2-flash-messages';
 import {Router} from '@angular/router';
 import { map } from "rxjs/operators";
+declare let alertify:any;
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -17,9 +18,11 @@ export class LoginPageComponent implements OnInit {
    Login(){
      this.authServ.loginEmail(this.login.email,this.login.password)
      .then((res)=>{
+         alertify.notify('Logeado Correctamente', 'success', 5, function(){  console.log('dismissed'); });
          this.router.navigate(['private']);
      }).catch((error)=>{
        console.log(error);
+       alertify.notify('Verificar Datos', 'error', 5, function(){  console.log('dismissed'); });
      })
    }
 
@@ -27,12 +30,13 @@ export class LoginPageComponent implements OnInit {
    this.authServ.facebookEmail()
    .then((res)=>{
     console.log(res);
+    alertify.notify('Logeado Correctamente', 'success', 5, function(){  console.log('dismissed'); });
     this.router.navigate(['/private']);
     alert(res);
 
   }).catch((error)=>{
     console.log(error);
-
+    alertify.notify('Verificar Datos', 'error', 5, function(){  console.log('dismissed'); });
     this.router.navigate(['/home']);
     alert(error);
  });
@@ -42,12 +46,13 @@ export class LoginPageComponent implements OnInit {
    this.authServ.googleEmail()
    .then((res)=>{
      console.log(res);
+     alertify.notify('Logeado Correctamente', 'success', 5, function(){  console.log('dismissed'); });
      this.router.navigate(['/private']);
      alert(res);
 
    }).catch((error)=>{
      console.log(error);
-
+     alertify.notify('Verificar Datos', 'error', 5, function(){  console.log('dismissed'); });
      this.router.navigate(['/home']);
      alert(error);
   });

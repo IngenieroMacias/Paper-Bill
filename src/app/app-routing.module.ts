@@ -9,7 +9,7 @@ import {MyGuardService} from './servicios/my-guard.service';
 import { from } from 'rxjs';
 
 const routes: Routes = [
-  {path:'',component: HomePageComponent},
+  {path:'',component: NotFoundPageComponent},
   {path:'home',component: HomePageComponent},
   {path:'login',component: LoginPageComponent},
   {path:'register',component: RegisterPageComponent},

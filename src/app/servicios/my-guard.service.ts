@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Router, CanActivate} from '@angular/router';
 import { AuthService } from '../servicios/auth.service';
-
+declare let alertify:any;
 @Injectable({
   providedIn: 'root'
 })
@@ -22,6 +22,7 @@ export class MyGuardService implements CanActivate {
    },(error)=>{
      console.log(error);
      this.router.navigate(['/home']);
+     alertify.notify('Error', 'error', 5, function(){  console.log('dismissed'); });
     })
   }
 
