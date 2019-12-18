@@ -1,10 +1,275 @@
 
- <div>
-  <h3>Live On</h3>
-  <ul>
-    <li><a><i class="fas fa-bug"></i> Additional Pages <span class="fas fa-chevron-down"></span></a></li>
-    <li><a><i class="fab fa-windows"></i> Extras <span class="fas fa-chevron-down"></span></a>
-    <li><a><i class="fas fa-sitemap"></i> Multilevel Menu <span class="fas fa-chevron-down"></span></a>
-    <li><a><i class="fas fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
-  </ul>
+<div class="right_col " style="padding-left: 10px;" role="main">
+  <!-- top tiles -->
+  <div class="row" style="display: inline-block;" >
+  <div class="tile_count">
+    <div class="col-md-2 col-sm-4  tile_stats_count">
+      <span class="count_top darktext"><i class="fas fa-building"></i> Compañias</span>
+      <div class="count darktext ">200</div>
+      <span class="count_bottom  darktext"><i class="greentext">200</i> Este Mes</span>
+    </div>
+    <div class="col-md-2 col-sm-4  tile_stats_count">
+      <span class="count_top darktext"><i class="fas fa-address-book"></i> Contactos</span>
+      <div class="count darktext">100</div>
+      <span class="count_bottom darktext"><i class="greentext"><i class="fa fa-sort-asc"></i>100 </i> Este Mes</span>
+    </div>
+    <div class="col-md-2 col-sm-4  tile_stats_count">
+      <span class="count_top darktext" ><i class="fas fa-file-invoice"></i> Facturas Emitidas </span>
+      <div class="count greentext">500</div>
+      <span class="count_bottom darktext"><i class="greentext"><i class="fa fa-sort-asc"></i>500 </i> Este Mes</span>
+    </div>
+    <div class="col-md-2 col-sm-4  tile_stats_count">
+      <span class="count_top darktext"><i class="far fa-file-alt"></i> Facturas Rechazadas</span>
+      <div class="count darktext">50</div>
+      <span class="count_bottom darktext "><i class="redtext"><i class="fa fa-sort-desc redtext"></i>50 </i> Este Mes</span>
+    </div>
+    <div class="col-md-2 col-sm-4  tile_stats_count">
+      <span class="count_top darktext"><i class="fas fa-receipt"></i> Notas Emitidas</span>
+      <div class="count darktext">200</div>
+      <span class="count_bottom darktext"><i  class="greentext"><i class="fa fa-sort-asc"></i>200 </i> Este Mes</span>
+    </div>
+    <div class="col-md-2 col-sm-4  tile_stats_count">
+      <span class="count_top darktext"><i class="far fa-file-alt"></i> Notas Rechazadas</span>
+      <div class="count darktext">10</div>
+      <span class="count_bottom darktext"><i class="redtext"><i class="fa fa-sort-asc"></i>10</i> Este Mes</span>
+    </div>
+  </div>
+</div>
+  <!-- /top tiles -->
+
+  <div class="row">
+    <div class="col-md-12 col-sm-12 ">
+      <div class="dashboard_graph">
+
+        <div class="row x_title">
+          <div class="col-md-6">
+            <h3 class="darktext">Facturas <small><i  class="greentext">Emitidas</i> / <i  class="redtext">Rechazadas</i></small></h3>
+          </div>
+          <div class="col-md-6">
+            <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+              <i class="fas fa-calendar-alt darktext"></i>
+              <span> Enero 1, 2019 - Diciembre 19, 2015</span> <b class="caret"></b>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-9 col-sm-9 ">
+          <div id="chart_plot_01" class="demo-placeholder" style="padding: 0px; position: relative;">
+            <canvas class="flot-base" width="439" height="280" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 439px; height: 280px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 99px; top: 264px; left: 60px; text-align: center;">Jan 02</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 99px; top: 264px; left: 126px; text-align: center;">Jan 03</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 99px; top: 264px; left: 193px; text-align: center;">Jan 04</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 99px; top: 264px; left: 259px; text-align: center;">Jan 05</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 99px; top: 264px; left: 325px; text-align: center;">Jan 06</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 99px; top: 264px; left: 392px; text-align: center;">Jan 07</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 252px; left: 13px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 232px; left: 7px; text-align: right;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 213px; left: 7px; text-align: right;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 194px; left: 7px; text-align: right;">30</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 174px; left: 7px; text-align: right;">40</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 155px; left: 7px; text-align: right;">50</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 136px; left: 7px; text-align: right;">60</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 116px; left: 7px; text-align: right;">70</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 97px; left: 7px; text-align: right;">80</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 78px; left: 7px; text-align: right;">90</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 58px; left: 1px; text-align: right;">100</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 39px; left: 2px; text-align: right;">110</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 20px; left: 1px; text-align: right;">120</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 1px; text-align: right;">130</div></div></div><canvas class="flot-overlay" width="439" height="280" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 439px; height: 280px;"></canvas></div>
+        </div>
+        <div class="col-md-3 col-sm-3  bg-white">
+          <div class="x_title">
+            <h2>Top Campaign Performance</h2>
+            <div class="clearfix"></div>
+          </div>
+
+          <div class="col-md-12 col-sm-12 ">
+            <div>
+              <p>Facturas Emitidas</p>
+              <div class="">
+                <div class="progress progress_sm bg-green" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
+              </div>
+            </div>
+            <div>
+              <p>Facturas Rechazadas</p>
+              <div class="">
+
+                <div class="progress progress_sm bg-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 15%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 ">
+            <div>
+              <p>Notas Emitidas</p>
+              <div class="">
+                <div class="progress progress_sm bg-green" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                </div>
+              </div>
+            </div>
+            <div>
+              <p>Notas Rechazadas</p>
+              <div class="">
+                <div class="progress progress_sm bg-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 5%;"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="clearfix"></div>
+      </div>
+    </div>
+
+  </div>
+  <br />
+
+  <div class="row">
+
+
+    <div class="col-md-4 col-sm-4 ">
+      <div class="x_panel tile fixed_height_320">
+        <div class="x_title">
+          <h2> Uso de Almacenamiento</h2>
+          <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Settings 1</a>
+                  <a class="dropdown-item" href="#">Settings 2</a>
+                </div>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+          <h4></h4>
+          <div class="widget_summary">
+            <div class="w_left w_25">
+              <span>Facturas</span>
+            </div>
+            <div class="w_center w_55">
+              <div class="progress">
+                <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
+                  <span class="sr-only">60% Completo</span>
+                </div>
+              </div>
+            </div>
+            <div class="w_right w_20">
+              <span>550</span>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+
+          <div class="widget_summary">
+            <div class="w_left w_25">
+              <span>Notas</span>
+            </div>
+            <div class="w_center w_55">
+              <div class="progress">
+                <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                  <span class="sr-only">60% Completo</span>
+                </div>
+              </div>
+            </div>
+            <div class="w_right w_20">
+              <span>210</span>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="widget_summary">
+            <div class="w_left w_25">
+              <span>Empresas</span>
+            </div>
+            <div class="w_center w_55">
+              <div class="progress">
+                <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+                  <span class="sr-only">60% Completo</span>
+                </div>
+              </div>
+            </div>
+            <div class="w_right w_20">
+              <span>200</span>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="widget_summary">
+            <div class="w_left w_25">
+              <span>Contactos</span>
+            </div>
+            <div class="w_center w_55">
+              <div class="progress">
+                <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
+                  <span class="sr-only">60% Completo</span>
+                </div>
+              </div>
+            </div>
+            <div class="w_right w_20">
+              <span>100</span>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 col-sm-4 ">
+      <div class="x_panel tile fixed_height_320">
+        <div class="x_title">
+          <h2>Quick Settings</h2>
+          <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+          <div class="dashboard-widget-content">
+            <ul class="quick-list">
+              <li><i class="fa fa-calendar-o"></i><a href="#"></a>
+              </li>
+              <li><i class="fa fa-bar-chart"></i><a href="#"></a> </li>
+              <li><i class="fa fa-line-chart"></i><a href="#"></a>
+              </li>
+              <li><i class="fa fa-bar-chart"></i><a href="#"></a> </li>
+              <li><i class="fa fa-line-chart"></i><a href="#"></a>
+              </li>
+              <li><i class="fa fa-area-chart"></i><a href="#"></a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-4 ">
+      <div class="x_panel tile fixed_height_320">
+        <div class="x_title">
+          <h2>Quick Settings</h2>
+          <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+          <div class="dashboard-widget-content">
+            <ul class="quick-list">
+              <li><i class="fa fa-calendar-o"></i><a href="#"></a>
+              </li>
+              <li><i class="fa fa-bar-chart"></i><a href="#"></a> </li>
+              <li><i class="fa fa-line-chart"></i><a href="#"></a>
+              </li>
+              <li><i class="fa fa-bar-chart"></i><a href="#"></a> </li>
+              <li><i class="fa fa-line-chart"></i><a href="#"></a>
+              </li>
+              <li><i class="fa fa-area-chart"></i><a href="#"></a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </div>

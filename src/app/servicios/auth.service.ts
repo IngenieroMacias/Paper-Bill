@@ -12,36 +12,32 @@ import { resolve } from 'url';
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(public afAuth:AngularFireAuth,public flashMessages:FlashMessagesService, public router:Router) { 
+  constructor(public afAuth:AngularFireAuth,public flashMessages:FlashMessagesService, public router:Router) {
     this.isLogged();
 }
 
-  public registro=(email,password)=>{
-   this.afAuth.auth.createUserWithEmailAndPassword(email,password)
-   .then((res)=>{
-    console.log(res);
-    alert('Usuario registrado');
+   public registro=(email,password)=>{
+    this.afAuth.auth.createUserWithEmailAndPassword(email,password)
+    .then((res)=>{
+     console.log(res);
+   alert('Usuario registrado');
     this.router.navigate(['/private']);
-      
-   }).catch((error)=>{
-    console.log(error);
-    alert('Error');
-   }) 
-  }
+
+    }).catch((error)=>{
+     console.log(error);
+     alert('Error');
+    })
+   }
 
 
-  // public loginEmail=(email,password)=>{
-  //  this.afAuth.auth.signInWithEmailAndPassword(email,password)
-  //  .then((resp)=>{
-  //   console.log(resp);
-  //   alert('Usuario registrado');
-  //   this.router.navigate(['/private']);
-        
-  //  }).catch((error)=>{
-  //   console.log(error);
-  //   alert('Error');
-  //  }) 
+  // registro(email:string,password:string){
+  //   return new Promise((resolve,reject)=>{
+  //     this.afAuth.auth.createUserWithEmailAndPassword(email,password)
+  //     .then(userData=> resolve(userData),
+  //     err=>reject(err));
+  //   });
   // }
+
 
   loginEmail(email,password){
     return new Promise((resolve,reject)=>{
@@ -50,7 +46,18 @@ export class AuthService {
       err=>reject(err));
     });
   }
-    
+
+
+  facebookEmail(){
+    return this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider());
+
+  }
+
+
+  googleEmail(){
+    return  this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  }
+
   public getAuth(){
     return this.afAuth.authState.map (auth => auth);
   }

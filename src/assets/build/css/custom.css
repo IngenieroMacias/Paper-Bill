@@ -1169,23 +1169,23 @@ body .container.body .right_col {
   max-height: 400px !important; }
 
 /**  ------------------------------------------  **/
-.blue {
+.bluetext {
   color: #3498DB; }
 
-.purple {
+.purpletext {
   color: #9B59B6; }
 
-.green {
+.greentext {
   color: #1ABB9C; }
 
-.aero {
+.aerotext {
   color: #9CC2CB; }
 
-.red {
+.redtext {
   color: #E74C3C; }
 
-.dark {
-  color: #34495E; }
+.darktext {
+  color: #73879C; }
 
 .border-blue {
   border-color: #3498DB !important; }

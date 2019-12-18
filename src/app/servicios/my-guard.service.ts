@@ -9,18 +9,19 @@ export class MyGuardService implements CanActivate {
 
   public isLogin = false;
 
-  constructor(public AuthServ: AuthService, public router: Router) { 
+  constructor(public AuthServ: AuthService, public router: Router) {
     this.AuthServ.isLogged()
     .subscribe((result)=>{
       if(result && result.uid){
         this.isLogin=true;
-        this.router.navigate(['/']);
+        this.router.navigate(['/private']);
       }else{
         this.isLogin=false;
+        this.router.navigate(['/home']);
       }
    },(error)=>{
      console.log(error);
-       this.isLogin=false;  
+     this.router.navigate(['/home']);
     })
   }
 

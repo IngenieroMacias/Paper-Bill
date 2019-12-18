@@ -10,6 +10,7 @@ import { from } from 'rxjs';
 
 const routes: Routes = [
   {path:'',component: HomePageComponent},
+  {path:'home',component: HomePageComponent},
   {path:'login',component: LoginPageComponent},
   {path:'register',component: RegisterPageComponent},
   {path:'private',component: PrivatePageComponent, canActivate:[MyGuardService]},
